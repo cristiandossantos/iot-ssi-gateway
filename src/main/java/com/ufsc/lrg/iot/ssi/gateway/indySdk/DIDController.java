@@ -5,7 +5,6 @@
 package com.ufsc.lrg.iot.ssi.gateway.indySdk;
 
 
-import org.hyperledger.indy.sdk.IndyException;
 import org.hyperledger.indy.sdk.did.Did;
 
 import org.hyperledger.indy.sdk.did.DidResults;
@@ -14,7 +13,7 @@ import org.hyperledger.indy.sdk.wallet.Wallet;
 import org.json.JSONObject;
 
 import static org.hyperledger.indy.sdk.ledger.Ledger.*;
-import org.hyperledger.indy.sdk.ledger.LedgerResults;
+
 /**
  *
  * @author 07429377980
@@ -38,11 +37,7 @@ public class DIDController {
                 DidResults.CreateAndStoreMyDidResult trustAnchorResult = Did.createAndStoreMyDid(walletHandle, trustAnchorDID_json).get();
                 String trustAnchorDID = trustAnchorResult.getDid();
                 return trustAnchorDID;
-                
-            
-
-        
-        }
+ }
 
 
     public DIDController() {
